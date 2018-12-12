@@ -100,15 +100,9 @@ function makeLinks($nav)
     $myReturn = '';
     
     foreach($nav as $key => $value){
-       /* 
-        if(THIS_PAGE == $key)
-        {//current page! add active class
-             $myReturn .= '
-          <a href="' . $key . '">' . $value . '</a>';
-            
-        }else{//add no formating*/
-             $myReturn .= '
-              <a href="' . $key . '">' . $value . '</a>';
+     
+    $url = $config->virtual_path . $key;
+    $myReturn .= '<a href="' . $url . '">' . $value .  '</a>';
     }
     
     return $myReturn;
